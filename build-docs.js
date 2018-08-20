@@ -37,7 +37,7 @@ body {
     background-color: #2C2F33;
     padding-left: 1cm;
     padding-top: 1cm;
-    color: rgb(116, 115, 117);
+    color: #FFFA;
 }
 </style>
 </head>
@@ -57,7 +57,7 @@ ${methods.filter(m => m.name != "/").map(end => `<tr>\n<td><a href="${end.name}"
 </table>
 <br>
 <h2>Latest News</h2>
-<a href="https://github.com/Terax235/splat2api/releases" target="_blank">Here</a>
+<a href="https://discord.gg/fCWumjH"><img src="https://discordapp.com/api/guilds/480846510070693910/embed.png?style=banner2"></a>
 </body>
 </html>`;
 
