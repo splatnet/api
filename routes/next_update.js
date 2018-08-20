@@ -13,7 +13,7 @@ module.exports = [
                     object.hours = "01";
                     object.minutes = (parseInt(object.minutes)-60).toString()
                 }
-            };
+            }
             object.offset = object.hours + ":" + object.minutes + ":" + object.seconds;
             res.status(200).json(object);
         },

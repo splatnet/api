@@ -34,7 +34,7 @@ app.listen(config.port, async () => {
             app[use.method.toLowerCase()](use.name, use.export);
             console.log("  " + use.name + " (" + use.method.toUpperCase() + ")");
         }
-    };
+    }
     setInterval(async () => {
         const MapSets = await Database.Maps.findOne();
         if (!MapSets) { newex = true; await Database.Maps.create({ latest: 100 }); }

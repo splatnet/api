@@ -22,7 +22,7 @@ class SplatAPI {
       const request = await fetch(`${baseurl}/api/data/stages`, RequestOptions).then(res => res.json());
       for (let stage of request.stages) {
         stage.image = `${baseurl}${stage.image}`;
-      };
+      }
       return request.stages.sortByProp("id");
     };
     static async getSchedules() {

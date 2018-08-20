@@ -22,7 +22,7 @@ class Database {
     }
     static reset() {
         return DB.sync({ force: true });
-    };
+    }
     static get Maps() { return Maps }
 };
 
