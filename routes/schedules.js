@@ -17,8 +17,8 @@ module.exports = [
     {
         name: "/schedules/:schedule_id",
         export(req, res) {
-            if (isNaN(req.params.schedule_id)) { return res.json({ error: "Invalid number." }) };
-            if (!config.Schedules.regular[req.params.schedule_id-1]) { return res.json({ error: "Not available." }) };
+            if (isNaN(req.params.schedule_id)) { return res.json({ error: "Invalid number." }) }
+            if (!config.Schedules.regular[req.params.schedule_id-1]) { return res.json({ error: "Not available." }) }
             var result = { regular: config.Schedules.regular[req.params.schedule_id-1], gachi: config.Schedules.gachi[req.params.schedule_id-1], league: config.Schedules.league[req.params.schedule_id-1] };
             return res.status(200).json(result);
         },

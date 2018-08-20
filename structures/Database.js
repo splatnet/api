@@ -19,11 +19,11 @@ class Database {
     constructor() {
         DB.sync();
         return DB;
-    };
+    }
     static reset() {
         return DB.sync({ force: true });
     };
-    static get Maps() { return Maps };
+    static get Maps() { return Maps }
 };
 
 module.exports = Database;
