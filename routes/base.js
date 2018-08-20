@@ -1,9 +1,9 @@
-const path = require('path');
+const path = require("path");
 module.exports = [
     {
-        name: '/',
+        name: "/",
         export: function (req, res) {
-            return res.status(200).sendFile(path.join(__dirname + '/../index.html'));
+            return res.status(200).sendFile(path.join(__dirname + "/../index.html"));
         },
     }
 ];

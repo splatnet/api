@@ -1,19 +1,19 @@
-const Sequelize = require('sequelize');
+const Sequelize = require("sequelize");
 
 const DB = new Sequelize({
-    host: 'localhost',
-    dialect: 'sqlite',
+    host: "localhost",
+    dialect: "sqlite",
     logging: false,
     operatorsAliases: false,
     define: {
-        collate: 'utf8mb4_bin'
+        collate: "utf8mb4_bin"
     },
-    storage: './Database.sqlite',
+    storage: "./Database.sqlite",
 });
 
 let str = Sequelize.STRING(300);
 
-const Maps = DB.define('bumps', { latest: str });
+const Maps = DB.define("bumps", { latest: str });
 
 class Database {
     constructor() {

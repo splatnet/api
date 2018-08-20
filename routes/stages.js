@@ -1,7 +1,7 @@
-const config = require('../config.json');
+const config = require("../config.json");
 module.exports = [
     {
-        name: '/stages',
+        name: "/stages",
         export: function (req, res) {
             return res.status(200).json(config.Stages);
         },

@@ -1,11 +1,11 @@
-const fs = require('fs');
-const package = require('./package.json');
+const fs = require("fs");
+const package = require("./package.json");
 
 let methods = [];
 
-let routes = fs.readdirSync('./routes/');
+let routes = fs.readdirSync("./routes/");
 for (let file of routes) {
-    var f = require('./routes/' + file);
+    var f = require("./routes/" + file);
     for (var use of f) {
         if (!use.method) use.method = "get";
         methods.push(use);
@@ -53,7 +53,7 @@ By <a href="https://github.com/Terax235" target="_blank">Terax235</a> - Version 
 <th>Method</th>
 <th>Description</th>
 </tr>
-${methods.filter(m => m.name != '/').map(end => `<tr>\n<td><a href="${end.name}" target="_blank">${end.name}</a></td>\n<td>${end.method.toUpperCase()}</td>\n<td>${end.description || '-'}</td>\n</tr>`).sort().join('\n')}
+${methods.filter(m => m.name != "/").map(end => `<tr>\n<td><a href="${end.name}" target="_blank">${end.name}</a></td>\n<td>${end.method.toUpperCase()}</td>\n<td>${end.description || "-"}</td>\n</tr>`).sort().join("\n")}
 </table>
 <br>
 <h2>Latest News</h2>
@@ -61,4 +61,4 @@ ${methods.filter(m => m.name != '/').map(end => `<tr>\n<td><a href="${end.name}"
 </body>
 </html>`;
 
-fs.writeFileSync('./index.html', basecode);
+fs.writeFileSync("./index.html", basecode);
