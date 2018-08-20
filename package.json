@@ -1,0 +1,28 @@
+{
+  "name": "splat2api",
+  "version": "1.2.0",
+  "description": "A public Splatoon 2 API.",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.16.3",
+    "moment": "^2.22.2",
+    "moment-duration-format": "^2.2.2",
+    "morgan": "^1.9.0",
+    "node-fetch": "^2.2.0",
+    "sequelize": "^4.38.0",
+    "sqlite3": "^4.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "splatoon2",
+    "terax235",
+    "api",
+    "splatoon",
+    "splat2api"
+  ],
+  "author": "Terax235",
+  "license": "MIT"
+}

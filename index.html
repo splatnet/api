@@ -1,0 +1,87 @@
+<html>
+<head>
+<meta charset="utf8">
+<title>splat2api</title>
+<meta name="description" content="A public Splatoon 2 API." />
+<!-- Twitter Card data -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@Terax235">
+<meta name="twitter:title" content="Splatoon 2 API">
+<meta name="twitter:description" content="A public Splatoon 2 API.">
+<meta name="twitter:creator" content="@Terax235">
+
+<!-- Open Graph data -->
+<meta property="og:title" content="Splatoon 2 API" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://api.splatoon.terax235.me/" />
+<meta property="og:description" content="A public Splatoon 2 API." />
+<meta property="og:site_name" content="terax235" />
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<style>
+body {
+    background-color: #2C2F33;
+    padding-left: 1cm;
+    padding-top: 1cm;
+    color: rgb(116, 115, 117);
+}
+</style>
+</head>
+<body>
+<h1>Welcome to splat2api</h1>
+This API shows information about map schedules in Splatoon 2.<br>
+By <a href="https://github.com/Terax235" target="_blank">Terax235</a> - <a href="https://github.com/Terax235/splat2api" target="_blank">Source Code</a>
+<br><br>
+<h2>Documentation</h2>
+<table style="width:100%">
+<tr>
+<th>Endpoint</th>
+<th>Method</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><a href="/coop_schedules" target="_blank">/coop_schedules</a></td>
+<td>GET</td>
+<td>Returns the next coop mode schedules</td>
+</tr>
+<tr>
+<td><a href="/coop_schedules/:schedule_id" target="_blank">/coop_schedules/:schedule_id</a></td>
+<td>GET</td>
+<td>Returns a specific coop mode schedule (schedule_id can be 1 or 2).</td>
+</tr>
+<tr>
+<td><a href="/coop_schedules/current" target="_blank">/coop_schedules/current</a></td>
+<td>GET</td>
+<td>Returns the current coop mode schedules (if there is no coop currently, it'll return an object containing { "active" : false }</td>
+</tr>
+<tr>
+<td><a href="/next_update" target="_blank">/next_update</a></td>
+<td>GET</td>
+<td>Returns the time until the APIs information gets updated (e.g. until the next map rotation) in hours, minutes and seconds.</td>
+</tr>
+<tr>
+<td><a href="/schedules" target="_blank">/schedules</a></td>
+<td>GET</td>
+<td>Returns the next 12 map schedules</td>
+</tr>
+<tr>
+<td><a href="/schedules/:schedule_id" target="_blank">/schedules/:schedule_id</a></td>
+<td>GET</td>
+<td>Returns a specific map schedule (schedule_id can be 1 - 12)</td>
+</tr>
+<tr>
+<td><a href="/schedules/current" target="_blank">/schedules/current</a></td>
+<td>GET</td>
+<td>Returns the current map schedule</td>
+</tr>
+<tr>
+<td><a href="/stages" target="_blank">/stages</a></td>
+<td>GET</td>
+<td>Returns all available Splatoon 2 stages</td>
+</tr>
+</table>
+<br>
+<h2>Latest News</h2>
+<a href="https://github.com/Terax235/splat2api/releases" target="_blank">Here</a>
+</body>
+</html>
