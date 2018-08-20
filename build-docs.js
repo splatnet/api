@@ -7,7 +7,7 @@ let routes = fs.readdirSync("./routes/");
 for (let file of routes) {
     var f = require("./routes/" + file);
     for (var use of f) {
-        if (!use.method) use.method = "get";
+        if (!use.method) { use.method = "get" };
         methods.push(use);
     };
 };
