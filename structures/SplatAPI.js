@@ -69,6 +69,22 @@ class SplatAPI {
         mode: current.game_mode,
       };
     };
+    static async getMerch() {
+      const request = await fetch(`${baseurl}/api/onlineshop/merchandises`, RequestOptions).then(res => res.json());
+      let merch = request.merchandises;
+      return merch;
+    };
+    static async getFestivals(type) {
+      let request = await fetch(`${baseurl}/api/festivals/${type}`, RequestOptions).then(res => res.json());
+      for (let festival of request.festivals) {
+        festival.images.alpha = baseurl + festival.images.alpha;
+        festival.images.bravo = baseurl + festival.images.bravo;
+        festival.images.panel = baseurl + festival.images.panel;
+        festival.special_stage.image = baseurl + festival.special_stage.image;
+      };
+      if (type == 'active') request = request.festivals;
+      return request;
+    };
 };
 
 module.exports = SplatAPI;
