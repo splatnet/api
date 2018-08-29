@@ -81,8 +81,16 @@ class SplatAPI {
         festival.images.bravo = baseurl + festival.images.bravo;
         festival.images.panel = baseurl + festival.images.panel;
         festival.special_stage.image = baseurl + festival.special_stage.image;
+        if (type == 'pasts') {
+          festival.results = request.results.filter(res => res.festival_id == festival.festival_id)[0];
+          festival.results.festival_id = undefined;
+          festival.results.summary = undefined;
+        };
       };
-      if (type == 'active') request = request.festivals;
+      if (type == 'active') { request = request.festivals };
+      if (type == 'pasts') {
+        request.results = undefined;
+      };
       return request;
     };
 };
