@@ -1,6 +1,6 @@
 {
   "name": "splat2api",
-  "version": "2.2.1",
+  "version": "2.3.0",
   "description": "A public Splatoon 2 API.",
   "main": "index.js",
   "dependencies": {
