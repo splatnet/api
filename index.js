@@ -24,7 +24,7 @@ async function updateStats() {
     // Checking for available API updates
     if (!updatePosted) {
         require("node-fetch")("https://raw.githubusercontent.com/Terax235/splat2api/master/package.json").then(res => res.json()).then(res => {
-            if (res.version != package.version) {
+            if (res.version > package.version) {
                 let mode;
                 let res_split = res.version.split(".");
                 let current_split = package.version.split(".");
