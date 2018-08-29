@@ -1,5 +1,11 @@
 const config = require('../config.json');
 
+/*
+ *
+ * TODO: Rewriting endpoint "/festivals/pasts" to merge arrays results and festivals.
+ * 
+*/
+
 module.exports = [
     {
         name: "/festivals/active",
