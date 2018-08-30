@@ -56,6 +56,7 @@ body {
     font-family: 'Acme', serif;
     border-style: solid;
     padding-left: 1rem;
+    margin-right: 2rem;
 }  
 </style>
 </head>
