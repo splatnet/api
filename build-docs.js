@@ -79,7 +79,7 @@ ${methods.filter(m => m.name != "/").map(end => `<tr>\n<td><a href="${end.name}"
 <a href="https://discord.gg/fCWumjH"><img src="https://discordapp.com/api/guilds/480846510070693910/embed.png?style=banner2"></a>
 <br><br>
 <b>Build date:</b> 
-<script>document.write(new Date())</script>
+${new Date()}
 </body>
 </html>`;
 
