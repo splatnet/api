@@ -3,6 +3,17 @@ const package = require("./package.json");
 
 let methods = [];
 
+let newscode = "";
+
+let exists = require('fs').statSync('./NEWS.html');
+if (exists) {
+    let code = require('fs').readFileSync('./NEWS.html', { encoding: "utf8" });
+    newscode = `<br><br><div class="note">
+<h2>Important Information</h2>
+${code}
+</div>`;
+};
+
 let routes = fs.readdirSync("./routes/");
 for (let file of routes) {
     var f = require("./routes/" + file);
@@ -32,6 +43,7 @@ var basecode = `<html>
 <meta property="og:site_name" content="Terax235" />
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
 <style>
 body {
     background-color: #2C2F33;
@@ -39,13 +51,20 @@ body {
     padding-top: 1cm;
     color: #FFFA;
 }
+.note {
+    background-color: #7986CB;
+    font-family: 'Acme', serif;
+    border-style: solid;
+    padding-left: 1rem;
+}  
 </style>
 </head>
 <body>
 <h1>Welcome to splat2api</h1>
 This API shows information about map schedules in Splatoon 2.<br>
-By <a href="https://github.com/Terax235" target="_blank">Terax235</a> - Version ${package.version} - <a href="https://github.com/Terax235/splat2api" target="_blank">Source Code</a>
-<br><br>
+By <a href="https://github.com/Terax235" target="_blank">Terax235</a> - Version ${package.version} - <a href="https://github.com/Terax235/splat2api" target="_blank">Source Code</a>\n
+${newscode}
+<br>
 <h2>Documentation</h2>
 <table style="width:100%">
 <tr>
@@ -65,3 +84,5 @@ ${methods.filter(m => m.name != "/").map(end => `<tr>\n<td><a href="${end.name}"
 </html>`;
 
 fs.writeFileSync("./index.html", basecode);
+
+console.log("Documentation generated.");
