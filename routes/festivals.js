@@ -4,9 +4,8 @@ module.exports = [
     {
         name: "/festivals/active",
         export(req, res) {
-            res.status(200).json(config.endpoints.festivals.active);
+            res.send("This endpoint is not available anymore. Please use /festivals instead.");
         },
-        description: "Returns a list of active splatfests. <b>Beta, does maybe not work yet</b>.",
     },
     {
         name: "/festivals/pasts",
@@ -18,7 +17,7 @@ module.exports = [
     {
         name: "/festivals/",
         export(req, res) {
-            res.redirect("/festivals/active");
+            res.status(200).json(config.endpoints.festivals.active);
         },
         description: "Returns a list of active splatfests. <b>Beta, does maybe not work yet</b>.",
     },
