@@ -15,9 +15,9 @@ class SplatAPI {
       if (!iksm_token || !base_url) { throw "You must provide a valid iksm_token and a base_url" }
       iksm = iksm_token;
       baseurl = base_url;
-      RequestOptions = { "method" : "GET", "headers" : { "Cookie" : `iksm_session=${iksm}`, "Accept-Language" : config.splatoon.request_locale, "User-Agent" : "Mozilla/5.0 (iPhone; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3" } };
-      return console.log("\x1b[33m%s\x1b[0m", `## SplatAPI 1.0.0 - Connected to ${process.name || "service"}! ##`, "\x1b[0m");
-    }
+      RequestOptions = { "method" : "GET", "headers" : { "Cookie" : `iksm_session=${iksm}`, "Host" : baseurl.replace("https://", ""), "Content-Type" : "application/json", "Connection" : "keep-alive", "Accept-Language" : config.splatoon.request_locale, "User-Agent" : "Mozilla/5.0 (iPhone; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3" } };
+      return console.log("\x1b[33m%s\x1b[0m", `## Splat2API - Successfully connected! ##`, "\x1b[0m");
+    };
     static async getStages() {
       const request = await fetch(`${baseurl}/api/data/stages`, RequestOptions).then(res => res.json());
       for (let stage of request.stages) {
