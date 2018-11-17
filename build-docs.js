@@ -27,19 +27,19 @@ var basecode = `<html>
 <head>
 <meta charset="utf8">
 <title>splat2api</title>
-<meta name="description" content="Splat2API is a public Splatoon 2 API, which you can use to retrieve information on current maps." />
+<meta name="description" content="splat2api is a public Splatoon 2 API, which you can use to retrieve information on current maps." />
 <!-- Twitter Card data -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@Terax235">
-<meta name="twitter:title" content="Splat2API">
-<meta name="twitter:description" content="Splat2API is a public Splatoon 2 API, which you can use to retrieve information on current maps.">
+<meta name="twitter:title" content="splat2api">
+<meta name="twitter:description" content="splat2api is a public Splatoon 2 API, which you can use to retrieve information on current maps.">
 <meta name="twitter:creator" content="@Terax235">
 
 <!-- Open Graph data -->
-<meta property="og:title" content="Splat2API" />
+<meta property="og:title" content="splat2api" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://api.splatoon.terax235.me/" />
-<meta property="og:description" content="Splat2API is a public Splatoon 2 API, which you can use to retrieve information on current maps." />
+<meta property="og:description" content="splat2api is a public Splatoon 2 API, which you can use to retrieve information on current maps." />
 <meta property="og:site_name" content="Terax235" />
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
