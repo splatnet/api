@@ -2,12 +2,6 @@ const config = require('../config.json');
 
 module.exports = [
     {
-        name: "/festivals/active",
-        export(req, res) {
-            res.send("This endpoint is not available anymore. Please use /festivals instead.");
-        },
-    },
-    {
         name: "/festivals/pasts",
         export(req, res) {
             res.status(200).json(config.endpoints.festivals.pasts);
