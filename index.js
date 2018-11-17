@@ -3,7 +3,7 @@ const app = express();
 const fs = require("fs");
 const config = require("./config.json");
 const SplatAPI = require("./structures/SplatAPI.js");
-const package = require("./package.json");
+const pkgfile = require("./package.json");
 new SplatAPI(config.splatoon.iksm_token, config.splatoon.base_url);
 const Database = require("./structures/Database.js");
 new Database();
@@ -12,8 +12,6 @@ const morgan = require("morgan");
 
 app.use(morgan("dev"));
 app.set("json spaces", 4);
-
-process.title = "SplatAPI";
 
 let updatePosted = false;
 
@@ -24,14 +22,8 @@ async function updateStats() {
     // Checking for available API updates
     if (!updatePosted) {
         require("node-fetch")("https://raw.githubusercontent.com/Terax235/splat2api/master/package.json").then(res => res.json()).then(res => {
-            if (res.version > package.version) {
-                let mode;
-                let res_split = res.version.split(".");
-                let current_split = package.version.split(".");
-                if (res_split[0] > current_split[0]) mode = "MAJOR";
-                if (res_split[1] > current_split[1]) mode = "medium";
-                if (res_split[2] > current_split[2]) mode = "minor";
-                console.log(`\n>>> There is a new ${mode} update out for the API! Update to version ${res.version} now by running git pull. <<<`);
+            if (res.version > pkgfile.version) {
+                console.log(`\n>>> There is a new update out for the API! Update to version ${res.version} now by running git pull. <<<`);
                 updatePosted = true;
             };
         });
