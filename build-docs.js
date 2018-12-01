@@ -5,7 +5,7 @@ let methods = [];
 
 let newscode = "";
 
-let exists = require('fs').statSync('./NEWS.html');
+let exists = require('fs').existsSync('./NEWS.html');
 if (exists) {
     let code = require('fs').readFileSync('./NEWS.html', { encoding: "utf8" });
     newscode = `<br><br><div class="note">
