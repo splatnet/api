@@ -9,7 +9,7 @@ let exists = require('fs').existsSync('./NEWS.html');
 if (exists) {
     let code = require('fs').readFileSync('./NEWS.html', { encoding: "utf8" });
     newscode = `<br><br><div class="note">
-<h2>Important Information</h2>
+<h2>News</h2>
 ${code}
 </div>`;
 };
@@ -76,9 +76,8 @@ ${newscode}
 ${methods.filter(m => m.name != "/").map(end => `<tr>\n<td><a href="${end.name}" target="_blank">${end.name}</a></td>\n<td>${end.method.toUpperCase()}</td>\n<td>${end.description || "-"}</td>\n</tr>`).sort().join("\n")}
 </table>
 <br>
-<h2>Latest News</h2>
-- The Discord guild was made private. If you have any questions about the API, feel free to contact <b>Terax#9758</b> at <a href="https://discordapp.com/" target="_blank">Discord</a>.<br>
-- Some updates will be published soon, adding full support for splatfests and more.<br>
+<h2>Discord</h2>
+Soon
 <br><br>
 <b>Build date:</b> 
 ${new Date()}
