@@ -22,14 +22,20 @@ class SplatAPI {
       const request = await fetch(`${baseurl}/api/data/stages`, RequestOptions).then(res => res.json());
       for (let stage of request.stages) {
         stage.image = `${baseurl}${stage.image}`;
-      }
+        stage.id = parseInt(stage.id);
+      };
       return request.stages.sortByProp("id");
     };
     static async getSchedules() {
       const request = await fetch(`${baseurl}/api/schedules`, RequestOptions).then(res => res.json());
       for (let mode of Object.keys(request)) {
-        request[mode][0].stage_a.image = `${baseurl}${request[mode][0].stage_a.image}`;
-        request[mode][0].stage_b.image = `${baseurl}${request[mode][0].stage_b.image}`;
+        request[mode].forEach(async m => {
+          m.stage_a.image = `${baseurl}${m.stage_a.image}`;
+          m.stage_b.image = `${baseurl}${m.stage_b.image}`;
+          m.stage_a.id = parseInt(m.stage_a.id);
+          m.stage_b.id = parseInt(m.stage_b.id);
+          m.rule.multiline_name = undefined;
+        });
       };
       return request;
     };
@@ -72,6 +78,13 @@ class SplatAPI {
     static async getMerch() {
       const request = await fetch(`${baseurl}/api/onlineshop/merchandises`, RequestOptions).then(res => res.json());
       let merch = request.merchandises;
+      for (let gear of merch) {
+        gear.gear.image = `${baseurl}${gear.gear.image}`;
+        gear.gear.brand.image = `${baseurl}${gear.gear.brand.image}`;
+        gear.gear.brand.frequent_skill.image = `${baseurl}${gear.gear.brand.frequent_skill.image}`;
+        gear.skill.image = `${baseurl}${gear.skill.image}`;
+        gear.gear.thumbnail = `${baseurl}${gear.gear.thumbnail}`;
+      };
       return merch;
     };
     static async getFestivals(type) {

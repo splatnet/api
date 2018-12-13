@@ -13,7 +13,7 @@ module.exports = [
         export(req, res) {
             res.status(200).json(config.endpoints.festivals.active);
         },
-        description: "Returns a list of active splatfests. <b>Beta, does maybe not work yet</b>.",
+        description: `Returns information on the current splatfest. If there's no splatfest ongoing, it'll return an object containing { "active" : false }.`,
     },
     {
         name: "/festivals/:festival_id",

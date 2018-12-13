@@ -6,6 +6,6 @@ module.exports = [
         export(req, res) {
             res.status(200).json(config.endpoints.merchandises);
         },
-        description: "Returns a list of gears you can currently order using Splatnet2.",
+        description: "Returns a list of gear you can order at SplatNet2.",
     }
 ];

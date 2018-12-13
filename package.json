@@ -1,15 +1,15 @@
 {
   "name": "splat2api",
-  "version": "2.4.0",
+  "version": "2.5.0",
   "description": "A public Splatoon 2 API.",
   "main": "index.js",
   "dependencies": {
     "express": "^4.16.4",
-    "moment": "^2.22.2",
+    "moment": "^2.23.0",
     "moment-duration-format": "^2.2.2",
     "morgan": "^1.9.1",
     "node-fetch": "^2.3.0",
-    "sequelize": "^4.41.2",
+    "sequelize": "^4.42.0",
     "sqlite3": "^4.0.4"
   },
   "devDependencies": {},

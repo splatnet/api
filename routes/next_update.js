@@ -14,7 +14,7 @@ module.exports = [
                     object.minutes = (parseInt(object.minutes)-60).toString()
                 }
             }
-            if (object.minutes < 10) object.minutes = "0" + object.minutes;
+            if (parseInt(object.minutes) < 10) object.minutes = "0" + object.minutes;
             object.offset = object.hours + ":" + object.minutes + ":" + object.seconds;
             res.status(200).json(object);
         },
