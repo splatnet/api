@@ -73,11 +73,14 @@ ${newscode}
 <th>Method</th>
 <th>Description</th>
 </tr>
-${methods.filter(m => m.name != "/").map(end => `<tr>\n<td><a href="${end.name}" target="_blank">${end.name}</a></td>\n<td>${end.method.toUpperCase()}</td>\n<td>${end.description || "-"}</td>\n</tr>`).sort().join("\n")}
+${methods.filter(m => m.name != "/" && m.name != "/changelog").map(end => `<tr>\n<td><a href="${end.name}" target="_blank">${end.name}</a></td>\n<td>${end.method.toUpperCase()}</td>\n<td>${end.description || "-"}</td>\n</tr>`).sort().join("\n")}
 </table>
 <br>
+<h2>Changelog</h2>
+<a href="changelog">Here</a><br>
+<br>
 <h2>Discord</h2>
-Soon
+Soon (If you need help / have other questions with the API, feel free to contact <b>Terax#9758</b> at Discord)
 <br><br>
 <b>Build date:</b> 
 ${new Date()}

@@ -45,8 +45,22 @@ class SplatAPI {
       if (request.schedules[0].start_time*1000 <= Date.now() && request.schedules[0].end_time*1000 >= Date.now()) isNow = true;
       for (let info of request.details) {
         info.stage.image = `${baseurl}${info.stage.image}`;
+        info.weapons.forEach(weapon => {
+          weapon.id = parseInt(weapon.id);
+          if (weapon.weapon) {
+            weapon.name = weapon.weapon.name;
+            weapon.thumbnail = `${baseurl}${weapon.weapon.thumbnail}`;
+            weapon.image = `${baseurl}${weapon.weapon.image}`;
+            weapon.weapon = undefined;
+          } else {
+            weapon.name = weapon.coop_special_weapon.name;
+            weapon.thumbnail = null;
+            weapon.image = `${baseurl}${weapon.coop_special_weapon.image}`;
+            weapon.coop_special_weapon = undefined;
+          }
+        })
       };
-      return { active: isNow, details: request.details, schedules: request.schedules };
+      return { active: isNow, details: request.details };
     };
     static currentCoop(input) {
       if (!input.active) { return null }
@@ -79,9 +93,13 @@ class SplatAPI {
       const request = await fetch(`${baseurl}/api/onlineshop/merchandises`, RequestOptions).then(res => res.json());
       let merch = request.merchandises;
       for (let gear of merch) {
+        gear.id = parseInt(gear.id);
+        gear.skill.id = parseInt(gear.skill.id);
+        gear.gear.id = parseInt(gear.gear.id);
         gear.gear.image = `${baseurl}${gear.gear.image}`;
         gear.gear.brand.image = `${baseurl}${gear.gear.brand.image}`;
-        gear.gear.brand.frequent_skill.image = `${baseurl}${gear.gear.brand.frequent_skill.image}`;
+        gear.gear.brand.id = parseInt(gear.gear.brand.id);
+        if (gear.gear.brand.frequent_skill) { gear.gear.brand.frequent_skill.image = `${baseurl}${gear.gear.brand.frequent_skill.image}`, gear.gear.brand.frequent_skill.id = parseInt(gear.gear.brand.frequent_skill.id) };
         gear.skill.image = `${baseurl}${gear.skill.image}`;
         gear.gear.thumbnail = `${baseurl}${gear.gear.thumbnail}`;
       };
