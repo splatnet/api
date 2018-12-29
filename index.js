@@ -21,7 +21,7 @@ async function updateStats() {
     config.endpoints.current_coop_schedule = SplatAPI.currentCoop(config.endpoints.coop_schedules);
     // Checking for available API updates
     if (!updatePosted) {
-        require("node-fetch")("https://raw.githubusercontent.com/Terax235/splat2api/master/package.json").then(res => res.json()).then(res => {
+        require("node-fetch")("https://raw.githubusercontent.com/splat2api/api/master/package.json").then(res => res.json()).then(res => {
             if (res.version > pkgfile.version) {
                 console.log(`\n>>> There is a new update out for the API! Update to version ${res.version} now by running git pull. <<<`);
                 updatePosted = true;

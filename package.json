@@ -1,6 +1,6 @@
 {
   "name": "splat2api",
-  "version": "2.5.1",
+  "version": "2.5.2",
   "description": "A public Splatoon 2 API.",
   "main": "index.js",
   "dependencies": {
@@ -24,5 +24,13 @@
     "splat2api"
   ],
   "author": "Terax235",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/splat2api/api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/splat2api/api/issues"
+  },
+  "homepage": "https://github.com/splat2api/api#readme"
 }

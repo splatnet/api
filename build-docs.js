@@ -63,7 +63,7 @@ body {
 <body>
 <h1>Welcome to splat2api</h1>
 A public Splatoon 2 API, which you can use to retrieve information on current map schedules.<br>
-By <a href="https://github.com/Terax235" target="_blank">Terax235</a> - Version ${package.version} - <a href="https://github.com/Terax235/splat2api" target="_blank">Source Code</a>\n
+By <a href="https://github.com/Terax235" target="_blank">Terax235</a> - Version ${package.version} - <a href="https://github.com/splat2api/api" target="_blank">Source Code</a>\n
 ${newscode}
 <br>
 <h2>Documentation</h2>
