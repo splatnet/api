@@ -1,12 +1,17 @@
 # splat2api
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/37e2e8e1c849410da15893f8d995cb33)](https://www.codacy.com/project/Terax235/splat2api/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Terax235/splat2api&amp;utm_campaign=Badge_Grade_Dashboard)
+http://api.splatoon.terax235.me/
 
-splat2api is a public Splatoon 2 API, which you can use to retrieve information on current maps and more. You can find it at http://api.splatoon.terax235.me/.
+**2019 UPDATE:**
+The API will get updated soon. Major changes are incoming, including:
+- A new UI
+  - Accounts (Use your Discord Account to log in to the site)
+  - API Keys (You'll have to generate an API key in order to be able to make requests to the API)
+  - Better Documentation (detailed, better design...)
+- Some changes being made to some endpoints, including
+  1. `/schedules/` - Updating properties `stage_a` and `stage_b` to merge them to an array called `stages`
 
-## Support
-You have questions? You need help with something?
-Feel free to contact me (**Terax#9758**) at [Discord](https://discordapp.com/).
+Because of safety reasons, the source code of the newer versions **won't be published**. The source code for the old versions will stay here and soon I'll also give instructions on gaining the required tokens to run the API. But the new API will be much better and simpler to use.
 
-## Selfhosting
-There will be no support provided here on how to selfhost the API. If you are experienced, you could take a look at [the splatnet2statink repository](https://github.com/frozenpandaman/splatnet2statink).
+## Contact
+You can contact me at Discord -> **Terax#9758**
