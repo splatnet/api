@@ -1,0 +1,8 @@
+{
+    "splatoon": {
+      "iksm_token": "<enter the actual iksm_token here>",
+      "base_url": "https://app.splatoon2.nintendo.net",
+      "request_locale" : "en/US"
+    },
+    "port": 8000
+}
