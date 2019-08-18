@@ -1,17 +1,9 @@
 # splat2api
 
-http://api.splatoon.terax235.me/
+~http://api.splatoon.terax235.me/~
 
-**2019 UPDATE:**
-The API will get updated soon. Major changes are incoming, including:
-- A new UI
-  - Accounts (Use your Discord Account to log in to the site)
-  - API Keys (You'll have to generate an API key in order to be able to make requests to the API)
-  - Better Documentation (detailed, better design...)
-- Some changes being made to some endpoints, including
-  1. `/schedules/` - Updating properties `stage_a` and `stage_b` to merge them to an array called `stages`
-
-Because of safety reasons, the source code of the newer versions **won't be published**. The source code for the old versions will stay here and soon I'll also give instructions on gaining the required tokens to run the API. But the new API will be much better and simpler to use.
+# IMPORTANT
+The site is **down**. I'll not longer host the API, so if you want to use it, you'll have to host an instance by yourself. If I find enough time, I'll publish a little documentation on how to get the required auth tokens to communicate with the Nintendo servers. I can already tell that you need to capture traffic of your mobile device, and capture requests of the NSO (Nintendo Switch Online) app. Then you can find the required auth token.
 
 ## Contact
 You can contact me at Discord -> **Terax#9758**
