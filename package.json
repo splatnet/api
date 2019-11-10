@@ -4,12 +4,12 @@
   "description": "A public Splatoon 2 API.",
   "main": "index.js",
   "dependencies": {
-    "express": "^4.16.4",
-    "moment": "^2.23.0",
-    "moment-duration-format": "^2.2.2",
+    "express": "^4.17.1",
+    "moment": "^2.24.0",
+    "moment-duration-format": "^2.3.2",
     "morgan": "^1.9.1",
-    "node-fetch": "^2.3.0",
-    "sequelize": "^4.42.0",
+    "node-fetch": "^2.6.0",
+    "sequelize": "^4.44.3",
     "sqlite3": "^4.0.4"
   },
   "devDependencies": {},
