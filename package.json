@@ -9,7 +9,7 @@
     "moment-duration-format": "^2.3.2",
     "morgan": "^1.9.1",
     "node-fetch": "^2.6.0",
-    "sequelize": "^4.44.3",
+    "sequelize": "^5.15.1",
     "sqlite3": "^4.0.4"
   },
   "devDependencies": {},
